@@ -1,0 +1,753 @@
+/* Flexbox Container for Room Options */
+.room-options-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+}
+
+/* Room Card Styles */
+.room-card {
+    display: flex;
+    flex-direction: row;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    background-color: #fff;
+    margin-bottom: 16px;
+}
+
+.room-card:hover {
+    transform: scale(1.05);
+}
+
+/* Flex Item for each Room Card */
+.room-image {
+    width: 50%;
+    height: auto;
+    border-right: 4px solid #4CAF50;
+    cursor: pointer;
+    flex: 1 0 auto; /* Allow the image to take available space */
+}
+
+.room-details {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding: 20px;
+    flex: 1 0 auto; /* Allow the content to take available space */
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 500px) { /* Changed to 600px to cover more practical mobile devices */
+    .room-card {
+        display: flex;
+        flex-direction: column;
+        width: 100vw; /* Ensure card takes full width of the screen */
+        margin: 0; /* Remove margins */
+        box-sizing: border-box; /* Ensure padding and borders are included in the width */
+    }
+
+    .room-image, .room-details {
+        width: 100%;
+        min-width: 400px; /* Ensure minimum width for each section */
+        box-sizing: border-box; /* Include padding in width calculation */
+    }
+
+    .room-image {
+        border-right: none;
+        border-bottom: 4px solid #4CAF50;
+    }
+
+    .room-image img {
+        width: 100%; /* Ensure image takes full width of the container */
+        height: auto;
+        object-fit: cover;
+    }
+
+    .room-details {
+        padding: 10px;
+    }
+}
+
+.room-details h2 {
+    margin-top: 0;
+    font-size: 24px;
+}
+
+.room-details .bed-info {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    color: #555;
+}
+
+.room-details .bed-info i {
+    margin-right: 8px;
+}
+
+.room-description,
+.room-amenities,
+.room-price {
+    margin-bottom: 16px;
+}
+
+.room-description h3,
+.room-amenities h3,
+.room-price h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.room-description p,
+.room-amenities ul,
+.room-price p {
+    margin: 8px 0;
+    font-size: 14px;
+    color: #333;
+}
+
+.room-amenities ul {
+    list-style: none;
+    padding: 0;
+}
+
+.room-amenities li {
+    margin-bottom: 8px;
+}
+
+.room-price p.highlight {
+    background-color: #ffeb3b;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+.availability {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+}
+
+.available {
+    font-weight: bold;/* Container Styles */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between cards */
+    justify-content: center; /* Center cards horizontally */
+    padding: 20px;
+}
+
+/* Room Card Styles */
+.room-card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px; /* Adjust based on your preference */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.room-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.room-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.room-details {
+    padding: 15px;
+}
+
+.room-price {
+    margin: 10px 0;
+}
+
+.highlight {
+    font-weight: bold;
+}
+
+.availability {
+    margin: 10px 0;
+}
+
+.available {
+    color: green;
+    font-weight: bold;
+}
+
+/* Lightbox Styles */
+.lightbox {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox-content {
+    position: relative;
+    max-width: 90%;
+    max-height: 80%;
+    margin: auto;
+    background: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Thumbnail Styles */
+.thumbnail-container {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.thumbnail {
+    width: 60px;
+    height: auto;
+    cursor: pointer;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    transition: border-color 0.3s;
+}
+
+.thumbnail:hover {
+    border-color: #333;
+}
+
+
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+    color: green;
+    margin-right: 8px;
+}
+
+.high-demand {
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* Lightbox Styles */
+.lightbox-content {
+    position: relative;
+    max-width: 95%;
+    max-height: 95vh;
+    margin: auto;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.lightbox-content img {
+    max-width: 100%;
+    max-height: 80vh;
+    object-fit: contain;
+    transition: opacity 0.5s ease;
+}
+
+.lightbox-content .fade-out {
+    opacity: 0;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 24px;
+}
+
+
+.room-card:hover {
+    transform: scale(1.05); /* ขยายการ์ดเมื่อมีการโฮเวอร์ */
+}
+
+
+/* Styling for Room Image */
+.room-image {
+    width: 100%; /* ปรับความกว้างภาพให้เต็มที่ของการ์ด */
+    height: auto; /* ปรับความสูงตามสัดส่วนภาพ */
+    border-bottom: 4px solid #4CAF50;
+    margin-bottom: 10px; /* เพิ่มระยะห่างระหว่างภาพและข้อความ */
+    cursor: pointer; /* เปลี่ยน cursor เป็น pointer เมื่อ hover */
+}
+
+/* Styling for Room Content */
+.room-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%; /* ปรับขนาดให้เต็มที่ของการ์ด */
+}
+
+.room-details, .room-description, .room-amenities {
+    padding: 20px;
+}
+
+.room-details h2 {
+    margin-top: 0;
+    font-size: 24px;
+}
+
+.room-details .bed-info {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    color: #555;
+}
+
+.room-details .bed-info i {
+    margin-right: 8px;
+}
+
+.availability {
+    margin: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.sold-out {
+    color: red;
+    font-weight: bold;
+    border: 2px solid red;
+    padding: 2px 8px;
+    display: inline-block;
+    margin-right: 10px; /* เพิ่มระยะห่างระหว่าง SOLD OUT และลิงก์ */
+}
+
+.available {
+    color: green;
+    font-weight: bold;
+    border: 2px solid green;
+    padding: 2px 8px;
+    display: inline-block;
+    margin-right: 10px; /* เพิ่มระยะห่างระหว่าง AVAILABLE และลิงก์ */
+}
+
+.high-demand {
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.highlight {
+    background-color: rgb(243, 243, 174); /* เปลี่ยนสีพื้นหลังเป็นสีเหลือง */
+    font-weight: bold; /* ทำให้ฟอนต์เป็นตัวหนา */
+    padding: 5px; /* เพิ่มการเว้นระยะรอบข้อความ */
+    border-radius: 5px; /* ทำให้มุมขอบเป็นมุมโค้ง */
+}
+
+/* Lightbox Styles */
+.lightbox-content {
+    position: relative;
+    max-width: 95%;
+    max-height: 95vh;
+    margin: auto;
+    background-color: #fff; /* Optional: add a background color to the lightbox content */
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.lightbox-content img {
+    max-width: 100%;
+    max-height: 80vh;
+    object-fit: contain;
+    transition: opacity 0.5s ease; /* เพิ่มการเปลี่ยนแปลงความโปร่งใส */
+}
+
+.lightbox-content .fade-out {
+    opacity: 0;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 24px;
+}
+  
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.header {
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    overflow: hidden;
+}
+
+.header img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(70%);
+}
+
+.header-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-align: center;
+    padding: 0 20px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+.header-content h1,
+.header-content h3 {
+    margin: 0;
+    font-weight: bold;
+}
+
+.header-content h1 {
+    font-size: 3em;
+}
+
+.header-content h3 {
+    font-size: 1.5em;
+}
+
+.header-content h5 {
+    display: none;
+}
+
+@media (max-width: 767px) {
+    .header-content h1 {
+        display: none;
+    }
+
+    .header-content h5 {
+        display: block;
+        font-size: 2em;
+        white-space: nowrap;
+    }
+
+    .header-content h3 {
+        font-size: 1.2em;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+    .header-content h1 {
+        display: none;
+    }
+
+    .header-content h3 {
+        font-size: 1.8em;
+    }
+}
+
+@media (min-width: 1200px) {
+    .header-content h1 {
+        font-size: 4em;
+    }
+
+    .header-content h3 {
+        font-size: 2em;
+    }
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.room-card {
+    display: flex;
+    width: 80%;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.room-image {
+    width: 40%;
+    object-fit: cover;
+}
+
+.room-details {
+    padding: 20px;
+    width: 60%;
+}
+
+.room-details h2 {
+    margin: 0 0 10px;
+}
+
+.availability {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.sold-out {
+    color: red;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.high-demand {
+    color: blue;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #f1f1f1;
+    margin-top: 20px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.footer-content div {
+    text-align: left;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+}
+
+.footer-logo img {
+    height: 50px;
+    margin-right: 20px;
+}
+
+/* Lightbox Styles */
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox-content {
+    position: relative;
+    width: 90%;
+    max-width: 800px;
+    background: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.lightbox-content img {
+    max-width: 100%;
+    max-height: 80vh;
+    object-fit: contain;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #fff;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.lightbox-close:hover,
+.lightbox-close:focus {
+    color: #bbb;
+}
+
+.nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    transition: background 0.3s ease;
+}
+
+.nav-button.prev {
+    left: 10px;
+}
+
+.nav-button.next {
+    right: 10px;
+}
+
+.nav-button:hover {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.thumbnail-container {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.thumbnail {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    margin: 0 5px;
+    cursor: pointer;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+}
+
+.thumbnail:hover {
+    border-color: #555;
+}
+/* Basic overlay styles */
+.overlay {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Black background with opacity */
+    z-index: 1000; /* Ensure overlay is on top of other content */
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 90%;
+    max-height: 90%;
+    overflow-y: auto; /* Allows scrolling if content overflows */
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+    .overlay-content {
+        max-width: 95%;
+        max-height: 90%;
+    }
+}
+/* Overlay Styles */
+.overlay {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Black with opacity */
+    z-index: 1000; /* Sit on top */
+}
+
+/* Overlay Content Styles */
+.overlay-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the overlay */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 800px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Close Button Styles */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+}
+
+/* Room Description and Amenities Styles */
+.room-description, .room-amenities {
+    margin-bottom: 20px;
+}
+
+.room-description h3, .room-amenities h3 {
+    margin-bottom: 10px;
+}
+
+.room-amenities ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}

@@ -1,0 +1,98 @@
+/* Flexbox Container for Room Options */
+.room-options-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+}
+
+/* Flex Item for each Room Card */
+.room-card {
+    flex: 1 1 calc(33.333% - 32px); /* Adjust the percentage as needed */
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .room-card {
+        flex: 1 1 calc(50% - 32px);
+    }
+}
+
+@media (max-width: 480px) {
+    .room-card {
+        flex: 1 1 100%;
+    }
+}
+
+/* Styling for Room Image */
+.room-image {
+    width: 100%;
+    border-bottom: 4px solid #4CAF50;
+}
+
+/* Styling for Room Content */
+.room-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+/* Styling for Room Buttons */
+.room-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+/* Base styles */
+#w3-container {
+    background: #f5f5dc;
+    padding: 60px 20px;
+    border-radius: 20px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    max-width: 900px;
+    margin: 40px auto;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+#w3-container h2 {
+    font-weight: bold;
+    font-size: 28px; /* Increase font size */
+    color: #000000; /* Change color to black */
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#w3-container p {
+    font-size: 20px; /* Increase font size */
+    color: #000000; /* Change color to black */
+    line-height: 1.8;
+    margin: 0;
+}
+
+#w3-container img {
+    width: 100%;
+    max-width: 750px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+@media (min-width: 768px) {
+    #w3-container {
+        grid-template-columns: 1fr 1fr;
+        text-align: left;
+    }
+
+    #w3-container h2, #w3-container p {
+        font-size: 22px; /* Adjust font size for larger screens */
+    }
+}

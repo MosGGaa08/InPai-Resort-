@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inpai Resort</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="index.js" defer></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <img src="pedo.jpg" alt="Resort Image">
+        <div class="header-content">
+            <h1>Inpai Resort</h1>
+            <h5>Inpai Resort</h5>
+            <h3>Peaceful and Quiet</h3>
+        </div>
+    </header>
+
+<!-- Room Availability -->
+<div class="container">
+    <!-- First Room Card -->
+    <div class="room-card">
+        <img src="wooden.jpg" alt="Wooden Room" class="room-image" onclick="openLightbox('lightbox-1')">
+        <div class="room-details">
+            <h2>Wooden Room</h2>
+            <div class="bed-info">
+                <i class="fas fa-bed"></i> One bed (2 persons)
+            </div>
+            <button onclick="openOverlay('room-overlay')">View Details</button>
+            <div class="room-price">
+                <h3>Price</h3>
+                <p class="highlight">Price per night: 600 Bath</p>
+                <a href="https://www.booking.com/hotel/th/inpaayriis-rth-paay123456789101112131415161718192021.th.html?label=pc-th-booking-booking-sd-yqat&sid=d4f97572cb69afcca6b08610595db63a&aid=348858&ucfs=1&arphpl=1&dest_id=8394091&dest_type=hotel&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0&hpos=1&hapos=1&sr_order=popularity&srpvid=2b5122c4d2710465&srepoch=1720760211&from=searchresults#hotelTmpl" class="w3-button w3-green">Booking</a>
+            </div>
+            <div class="availability">
+                <span class="available">AVAILABLE</span>
+                <a href="#" class="high-demand"></a>
+            </div>
+            <p>This room is in high demand - book an available room while you can. <a href="#">click here</a></p>
+        </div>
+    </div>
+
+    <!-- Overlay for Wooden Room -->
+    <div id="room-overlay" class="overlay">
+        <div class="overlay-content">
+            <span class="close-btn" onclick="closeOverlay('room-overlay')">&times;</span>
+            <div class="room-description">
+                <h3>Room Description</h3>
+                <p>Room size: 30 Sq. m.</p>
+                <p>Room Space: 30 sq. m.</p>
+                <p>Room Capacity: 3 Persons (2 Adults + 1 Child)</p>
+                <p>Internet: Free WIFI Internet</p>
+            </div>
+            <div class="room-amenities">
+                <h3>Room Amenities</h3>
+                <ul>
+                    <li>Water service every morning</li>
+                    <li>Flat Screen TV</li>
+                    <li>Ashtray</li>
+                    <li>Tea/Coffee at lobby</li>
+                    <li>Table at balcony for working</li>
+                    <li>Hot & Cold shower</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Lightbox for Wooden Room -->
+    <div id="lightbox-1" class="lightbox">
+        <div class="lightbox-content">
+            <span class="lightbox-close" onclick="closeLightbox('lightbox-1')">&times;</span>
+            <button class="nav-button prev" onclick="changeLightboxImage('lightbox-1', -1)">&#10094;</button>
+            <img id="lightbox-main-image-1" src="wooden.jpg" alt="Wooden Room">
+            <button class="nav-button next" onclick="changeLightboxImage('lightbox-1', 1)">&#10095;</button>
+            <div class="thumbnail-container">
+                <img src="w1.jpg" alt="Thumbnail 1" class="thumbnail" data-src="w1.jpg" onclick="setLightboxImage('lightbox-1', 'w1.jpg')">
+                <img src="w2.jpg" alt="Thumbnail 2" class="thumbnail" data-src="w2.jpg" onclick="setLightboxImage('lightbox-1', 'w2.jpg')">
+                <img src="w3.jpg" alt="Thumbnail 3" class="thumbnail" data-src="w3.jpg" onclick="setLightboxImage('lightbox-1', 'w3.jpg')">
+                <img src="w4.jpg" alt="Thumbnail 4" class="thumbnail" data-src="w4.jpg" onclick="setLightboxImage('lightbox-1', 'w4.jpg')">
+                <img src="w5.jpg" alt="Thumbnail 5" class="thumbnail" data-src="w5.jpg" onclick="setLightboxImage('lightbox-1', 'w5.jpg')">
+            </div>
+        </div>
+    </div>
+
+    <!-- Second Room Card -->
+    <div class="room-card">
+        <img src="semen.jpg" alt="Garden Views" class="room-image" onclick="openLightbox('lightbox-2')">
+        <div class="room-details">
+            <h2>Garden Views</h2>
+            <div class="bed-info">
+                <i class="fas fa-bed"></i> Two beds (2-3 persons)
+            </div>
+            <div class="room-price">
+                <h3>Price</h3>
+                <p class="highlight">Price per night: 1100 Bath</p>
+                <a href="https://www.booking.com/hotel/th/inpaayriis-rth-paay123456789101112131415161718192021.th.html?label=pc-th-booking-booking-sd-yqat&sid=d4f97572cb69afcca6b08610595db63a&aid=348858&ucfs=1&arphpl=1&dest_id=8394091&dest_type=hotel&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0&hpos=1&hapos=1&sr_order=popularity&srpvid=2b5122c4d2710465&srepoch=1720760211&from=searchresults#hotelTmpl" class="w3-button w3-green">Booking</a>
+            </div>
+            <div class="availability">
+                <span class="available">AVAILABLE</span>
+                <a href="#" class="high-demand">This room is in high demand</a>
+            </div>
+            <p>This room is in high demand - book an available room while you can. <a href="#">click here</a></p>
+            <button onclick="openOverlay('room-overlay2')">View Details</button>
+        </div>
+    </div>
+
+    <!-- Overlay for Garden Views -->
+    <div id="room-overlay2" class="overlay">
+        <div class="overlay-content">
+            <span class="close-btn" onclick="closeOverlay('room-overlay2')">&times;</span>
+            <div class="room-description">
+                <h3>Room Description</h3>
+                <p>Room size: 40 Sq. m.</p>
+                <p>Room Space: 40 sq. m.</p>
+                <p>Room Capacity: 4 Persons (2 Adults + 2 Children)</p>
+                <p>Internet: Free WIFI Internet</p>
+            </div>
+            <div class="room-amenities">
+                <h3>Room Amenities</h3>
+                <ul>
+                    <li>Water service every morning</li>
+                    <li>Flat Screen TV</li>
+                    <li>Ashtray</li>
+                    <li>Tea/Coffee at lobby</li>
+                    <li>Table at balcony for working</li>
+                    <li>Hot & Cold shower</li>
+                    <li>Refrigerator</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Lightbox for Garden Views -->
+    <div id="lightbox-2" class="lightbox">
+        <div class="lightbox-content">
+            <span class="lightbox-close" onclick="closeLightbox('lightbox-2')">&times;</span>
+            <button class="nav-button prev" onclick="changeLightboxImage('lightbox-2', -1)">&#10094;</button>
+            <img id="lightbox-main-image-2" src="semen.jpg" alt="Garden Views">
+            <button class="nav-button next" onclick="changeLightboxImage('lightbox-2', 1)">&#10095;</button>
+            <div class="thumbnail-container">
+                <img src="55.jpg" alt="Thumbnail 1" class="thumbnail" data-src="55.jpg" onclick="setLightboxImage('lightbox-2', '55.jpg')">
+                <img src="22.jpg" alt="Thumbnail 2" class="thumbnail" data-src="22.jpg" onclick="setLightboxImage('lightbox-2', '22.jpg')">
+                <img src="33.jpg" alt="Thumbnail 3" class="thumbnail" data-src="33.jpg" onclick="setLightboxImage('lightbox-2', '33.jpg')">
+                <img src="11.jpg" alt="Thumbnail 4" class="thumbnail" data-src="11.jpg" onclick="setLightboxImage('lightbox-2', '11.jpg')">
+                <img src="44.jpg" alt="Thumbnail 5" class="thumbnail" data-src="44.jpg" onclick="setLightboxImage('lightbox-2', '44.jpg')">
+            </div>
+        </div>
+    </div>
+
+   <!-- Third Room Card -->
+<div class="room-card">
+    <img src="h6.jpg" alt="Beach Front Cottage" class="room-image" onclick="openLightbox('lightbox-3')">
+    <div class="room-details">
+        <h2>House for rent</h2>
+        <div class="bed-info">
+            <i class="fas fa-bed"></i> Two beds (4 persons)
+        </div>
+        <button onclick="openOverlay('room-overlay3')">View Details</button>
+        <div class="room-price">
+            <h3>Price</h3>
+            <p class="highlight">Price per month: 7000 Bath</p>
+            <a href="#" class="w3-button w3-green">Booking</a>
+        </div>
+        <div class="availability">
+            <span class="sold-out">SOLD OUT</span>
+            <a href="#" class="high-demand">This room is in high demand</a>
+        </div>
+        <p>This room is in high demand - book an available room while you can. <a href="#">click here</a></p>
+    </div>
+</div>
+
+<!-- Overlay for House for rent -->
+<div id="room-overlay3" class="overlay">
+    <div class="overlay-content">
+        <span class="close-btn" onclick="closeOverlay('room-overlay3')">&times;</span>
+        <div class="room-description">
+            <h3>Room Description</h3>
+            <p>Room size: [Size in Sq. m.]</p>
+            <p>Room Space: [Space in Sq. m.]</p>
+            <p>Room Capacity: 4 Persons (2 Adults + 2 Children)</p>
+        </div>
+        <div class="room-amenities">
+            <h3>Room Amenities</h3>
+            <ul>
+                <li>Peaceful garden</li>
+                <li>Outdoor seating area (Hammock, Daybed, Coffee table)</li>
+                <li>Ashtray</li>
+                <li>Kitchenware</li>
+                <li>Table at balcony for working</li>
+                <li>Hot & Cold shower</li>
+                <li>Refrigerator</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- Lightbox for House for rent -->
+<div id="lightbox-3" class="lightbox">
+    <div class="lightbox-content">
+        <span class="lightbox-close" onclick="closeLightbox('lightbox-3')">&times;</span>
+        <button class="nav-button prev" onclick="changeLightboxImage('lightbox-3', -1)">&#10094;</button>
+        <img id="lightbox-main-image-3" src="h6.jpg" alt="Beach Front Cottage">
+        <button class="nav-button next" onclick="changeLightboxImage('lightbox-3', 1)">&#10095;</button>
+        <div class="thumbnail-container">
+            <img src="h1.jpg" alt="Thumbnail 1" class="thumbnail" data-src="h1.jpg" onclick="setLightboxImage('lightbox-3', 'h1.jpg')">
+            <img src="h2.jpg" alt="Thumbnail 2" class="thumbnail" data-src="h2.jpg" onclick="setLightboxImage('lightbox-3', 'h2.jpg')">
+            <img src="h3.jpg" alt="Thumbnail 3" class="thumbnail" data-src="h3.jpg" onclick="setLightboxImage('lightbox-3', 'h3.jpg')">
+            <img src="h4.jpg" alt="Thumbnail 4" class="thumbnail" data-src="h4.jpg" onclick="setLightboxImage('lightbox-3', 'h4.jpg')">
+            <img src="h5.jpg" alt="Thumbnail 5" class="thumbnail" data-src="h5.jpg" onclick="setLightboxImage('lightbox-3', 'h5.jpg')">
+        </div>
+    </div>
+</div>
+
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="ma.png" alt="Logo">
+                <p>Inpai Resort</p>
+            </div>
+            <div>
+                <p>&copy; 2024 Inpai Resort. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
