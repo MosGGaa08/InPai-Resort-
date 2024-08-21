@@ -418,7 +418,32 @@ The resort's secluded location ensures a super quiet and peaceful environment, f
         }
     }
 </style>
+<style>
+    /* การจัดการขนาดของ iframe */
+    .iframe-container {
+      position: relative;
+      width: 100%;
+      padding-top: 56.25%; /* อัตราส่วน 16:9 */
+      margin-bottom: 20px; /* ช่องว่างด้านล่าง */
+      overflow: hidden;
+      background: #f3f3f3; /* พื้นหลังเบลอ */
+      border-radius: 8px; /* มุมโค้งมน */
+    }
 
+    .iframe-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="iframe-container">
+    <iframe src="https://forms.office.com/r/R99dudeey3?embed=true" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen></iframe>
+  </div>
 <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
 <!-- Leaflet Map -->
